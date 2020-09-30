@@ -4,23 +4,25 @@
 #### Penguin data from the palmerpenguins package, by Allison Horst ##
 ######################################################################
 
+# Functions
+clean_headers <- function(names){
+  names <- sub('\\.{2}.+\\.','',names) # remove text after double period
+  names <- gsub('\\.','_',names) # replace periods in column names
+  return(names)
+}
 
 # Load data
 penguins <- read.csv("data/raw/penguins_raw.csv")
 
 # Clean data
-penguins$Species_short <- sub('(^\\w+)\\s.+','\\1',penguins$Species) # pick first word in Species column
-
-names(penguins) <- sub('\\.{2}.+\\.','',names(penguins)) # remove text after double period
-names(penguins) <- gsub('\\.','_',names(penguins)) # replace periods in column names
-
+penguins$Species_short <- sub('(^\\w+)\\s.+', '\\1',penguins$Species) # pick first word in Species column
+names(penguins) <- clean_headers(names(penguins))
 penguins <- penguins[!is.na(penguins$Sex),] # remove data where sex is unknown
 
 # Turn species, island, sex into factors
 penguins$Species_short <- as.factor(penguins$Species_short)
 penguins$Sex <- as.factor(penguins$Sex)
 penguins$Island <- as.factor(penguins$Island)
-
 
 
 # Plot basic measurements
