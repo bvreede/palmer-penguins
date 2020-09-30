@@ -6,7 +6,7 @@
 
 
 # Load data
-penguins <- read.csv("data/raw/penguins_raw.csv")
+penguins <- read.csv("penguins_raw.csv")
 
 # Clean data
 penguins$Species_short <- sub('(^\\w+)\\s.+','\\1',penguins$Species) # pick first word in Species column
