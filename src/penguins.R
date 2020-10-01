@@ -4,6 +4,9 @@
 #### Penguin data from the palmerpenguins package, by Allison Horst ##
 ######################################################################
 
+# Load libraries
+library(ggplot2)
+
 # Functions
 clean_headers <- function(names){
   names <- sub('\\.{2}.+\\.','',names) # remove text after double period
@@ -68,3 +71,8 @@ points(
   penguins$Culmen_Depth[penguins$Sex=="FEMALE"&penguins$Species_short=="Gentoo"],
   pch=6, col="pink")
 
+
+# Make a similar plot using ggplot2
+ggplot(penguins, aes(x = Culmen_Length, y = Culmen_Depth, color = Species_short)) +
+  geom_point() +
+  theme_minimal()
