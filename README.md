@@ -1,7 +1,6 @@
 # Palmer Penguins
 
 [![DOI](https://sandbox.zenodo.org/badge/299439067.svg)](https://sandbox.zenodo.org/badge/latestdoi/299439067)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bvreede/palmer-penguins/master)
 
 Version 0.1.0
 
