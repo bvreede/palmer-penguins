@@ -1,7 +1,5 @@
 # Palmer Penguins
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bvreede/palmer-penguins/master)
-
 Version 0.1.0
 
 An analysis of Palmer penguin data
