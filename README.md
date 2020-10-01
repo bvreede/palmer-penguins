@@ -1,5 +1,7 @@
 # Palmer Penguins
 
+[![DOI](https://sandbox.zenodo.org/badge/299439067.svg)](https://sandbox.zenodo.org/badge/latestdoi/299439067)
+
 Version 0.1.0
 
 An analysis of Palmer penguin data
