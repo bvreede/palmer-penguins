@@ -6,9 +6,13 @@
 
 # Load libraries
 library(ggplot2)
+library(docstring)
 
 # Functions
 clean_headers <- function(names){
+  #' @title Clean the headers
+  #' 
+  #' @param names the names of headers
   names <- sub('\\.{2}.+\\.','',names) # remove text after double period
   names <- gsub('\\.','_',names) # replace periods in column names
   return(names)
